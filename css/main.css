@@ -1,0 +1,24 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css);
+@import url(https://fonts.googleapis.com/css?family=Inter+Tight:300,regular,500,600,700,300italic,italic,500italic,600italic,700italic);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css);
+
+@import url(/css/common.css);
+@import url(/css/app.css);
+@import url(/css/blocks/header.css);
+@import url(/css/blocks/hero.css);
+@import url(/css/blocks/categories.css);
+@import url(/css/blocks/about.css);
+@import url(/css/blocks/footer.css);
+@import url(/css/blocks/products.css);
+@import url(/css/blocks/forms.css);
+
+/* Pages */
+@import url(/css/pages/about-page.css);
+@import url(/css/pages/delivery.css);
+@import url(/css/pages/contacts.css);
+@import url(/css/pages/faq.css);
+@import url(/css/pages/aside-pages.css);
+@import url(/css/pages/account.css);
+@import url(/css/pages/catalog.css);
+@import url(/css/pages/cart.css);
+@import url(/css/pages/blog.css);

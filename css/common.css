@@ -1,0 +1,97 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-color: #021e20;
+  --primary-bg-color: #fffefc;
+  --element-text-color: #e8ede7;
+  --element-bg-color: #186378;
+  --active-color: #b96b85;
+
+  --primary-font-family: "Inter Tight", sans-serif;
+
+  --primary-font-size: 1rem;
+
+  --mb-small: 2rem;
+  --mb-large: 3rem;
+
+  --large-screen: 1440px;
+  --desktop: 1200px;
+  --laptop: 992px;
+  --tablet: 768px;
+  --mobile: 570px;
+  --small-mobile: 400px;
+
+  --currency-symbol: "\20B4";
+}
+
+body {
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+  font-family: var(--primary-font-family);
+  font-size: var(--primary-font-size);
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* overflow-x: hidden; */
+}
+
+header {
+  font-size: 0.875rem;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+footer {
+  font-size: 0.875rem;
+  color: var(--element-text-color);
+  background-color: var(--element-bg-color);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
+}
+
+h2 {
+  font-size: clamp(1.2rem, 1.5vw, 1.3rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}

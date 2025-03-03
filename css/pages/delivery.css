@@ -1,0 +1,49 @@
+.delivery__item {
+  margin-bottom: var(--mb-large);
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+.delivery__text,
+.delivery__list {
+  width: 80%;
+  margin: 0 auto 1rem;
+}
+
+.delivery__list li {
+  margin: 0 8rem;
+  list-style: disc;
+  margin-bottom: 0.5rem;
+}
+
+.delivery__list-order {
+  width: 80%;
+  margin: 0 auto 0.7rem;
+  font-size: 0.875rem;
+}
+
+.delivery__list-order li {
+  list-style-type: style;
+}
+
+.delivery__company {
+  padding: 0 7rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.delivery__company-logo {
+  display: block;
+  flex-basis: 33%;
+  text-align: center;
+}
+
+.delivery__list-inner li {
+  list-style-type: circle;
+}
+
+.return .common__button {
+  margin-bottom: var(--mb-large);
+}

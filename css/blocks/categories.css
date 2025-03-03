@@ -1,0 +1,31 @@
+.categories {
+  margin-bottom: var(--mb-large);
+}
+
+.title {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-small);
+}
+
+.title__new,
+.title__hits,
+.title__sale {
+  text-transform: uppercase;
+  color: var(--element-bg-color);
+  transition: color 0.1s linear;
+}
+
+.title__new:hover,
+.title__hits:hover,
+.title__sale:hover {
+  color: var(--active-color);
+}
+
+hr {
+  height: 2px;
+  background-color: var(--element-bg-color);
+  margin-bottom: var(--mb-small);
+}

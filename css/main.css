@@ -2,23 +2,23 @@
 @import url(https://fonts.googleapis.com/css?family=Inter+Tight:300,regular,500,600,700,300italic,italic,500italic,600italic,700italic);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css);
 
-@import url(css/common.css);
-@import url(css/app.css);
-@import url(css/blocks/header.css);
-@import url(css/blocks/hero.css);
-@import url(css/blocks/categories.css);
-@import url(css/blocks/about.css);
-@import url(css/blocks/footer.css);
-@import url(css/blocks/products.css);
-@import url(css/blocks/forms.css);
+@import url(common.css);
+@import url(app.css);
+@import url(blocks/header.css);
+@import url(blocks/hero.css);
+@import url(blocks/categories.css);
+@import url(blocks/about.css);
+@import url(blocks/footer.css);
+@import url(blocks/products.css);
+@import url(blocks/forms.css);
 
 /* Pages */
-@import url(css/pages/about-page.css);
-@import url(css/pages/delivery.css);
-@import url(css/pages/contacts.css);
-@import url(css/pages/faq.css);
-@import url(css/pages/aside-pages.css);
-@import url(css/pages/account.css);
-@import url(css/pages/catalog.css);
-@import url(css/pages/cart.css);
-@import url(css/pages/blog.css);
+@import url(pages/about-page.css);
+@import url(pages/delivery.css);
+@import url(pages/contacts.css);
+@import url(pages/faq.css);
+@import url(pages/aside-pages.css);
+@import url(pages/account.css);
+@import url(pages/catalog.css);
+@import url(pages/cart.css);
+@import url(pages/blog.css);

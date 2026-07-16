@@ -36,53 +36,108 @@ if (slides.length) {
   }, 5000);
 }
 
+// Products on Home page
+
+function createProductCard(product) {
+  const badge =
+    product.badge?.title
+      ? `<div class="badge badge__${product.badge.bg}">
+          ${product.badge.title}
+        </div>`
+      : "";
+
+  return `
+    <article class="product">
+      <div class="product__img">
+        ${badge}
+
+        <a href="#">
+          <img
+            src="${product.cover}"
+            alt="${product.name}"
+          />
+        </a>
+        <div class="product__icons">
+          <a href="" class="fas fa-heart"></a>
+          <a href="" class="fas fa-eye"></a>
+        </div>
+      </div>
+
+      <div class="product__content">
+        <p class="product__article">
+          ${product.description}
+        </p>
+
+        <h3 class="product__name">
+          <a href="#">
+            ${product.name}
+          </a>
+        </h3>
+
+        <div class="product__buy">
+          <div class="product__price">
+            <div class="product__price-retail">${product.price} грн/м</div>
+            <div class="product__price-wholesale">${product.priceWholesale} грн/м</div>
+            <span>від 10 м. пог.</span>
+          </div>
+
+          <div class="common__button">
+            <a href="html/about.html" class="common__btn">У кошик</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+const productContainer =
+  document.querySelector(".product__container");
+
+if (productContainer) {
+  productContainer.innerHTML = products
+    .map(product => createProductCard(product))
+    .join("");
+}
+
 // Categories filter on Home page
+
+function renderProducts(productsToRender) {
+  productContainer.innerHTML = productsToRender
+    .map(product => createProductCard(product))
+    .join("");
+}
+renderProducts(products);
 
 const newBtn = document.querySelector(".title__new");
 const hitsBtn = document.querySelector(".title__hits");
 const saleBtn = document.querySelector(".title__sale");
 
-const products = document.querySelectorAll(".product");
+newBtn.addEventListener("click", () => {
+  event.preventDefault();
+  renderProducts(
+    products.filter(
+      product => product.badge.title === "New"
+    )
+  );
+});
 
-if (newBtn && hitsBtn && saleBtn && products.length) {
-  function showProducts(filter) {
-    products.forEach(product => {
-      const hasNewBadge = product.querySelector(".badge__new");
-      const hasSaleBadge = product.querySelector(".badge__sale");
+saleBtn.addEventListener("click", () => {
+  event.preventDefault();
+  renderProducts(
+    products.filter(
+      product => product.badge.title === "Sale"
+    )
+  );
+});
 
-      let shouldShow = false;
-
-      if (filter === "new") {
-        shouldShow = hasNewBadge;
-      }
-
-      if (filter === "sale") {
-        shouldShow = hasSaleBadge;
-      }
-
-      if (filter === "hits") {
-        shouldShow = !hasNewBadge && !hasSaleBadge;
-      }
-
-      product.style.display = shouldShow ? "block" : "none";
-    });
-  }
-
-  newBtn.addEventListener("click", event => {
-    event.preventDefault();
-    showProducts("new");
-  });
-
-  saleBtn.addEventListener("click", event => {
-    event.preventDefault();
-    showProducts("sale");
-  });
-
-  hitsBtn.addEventListener("click", event => {
-    event.preventDefault();
-    showProducts("hits");
-  });
-}
+hitsBtn.addEventListener("click", () => {
+  event.preventDefault();
+  renderProducts(
+    products.filter(
+      product => !product.badge.title
+    )
+  );
+});
 
 // Accordion on FAQ page
 

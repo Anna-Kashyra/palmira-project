@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x52" href="../icon.png" />
     <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/main.js" defer></script>
     <title>Palmira Textile - Контакти</title>
   </head>
   <body>
@@ -600,23 +601,5 @@
         <span class="footer__bottom-copy">&copy; 2024 All rights reserve</span>
       </section>
     </footer>
-
-    <script>
-      var tabs = document.querySelectorAll(".tabs li");
-
-      tabs.forEach(function (tab) {
-        tab.addEventListener("click", function () {
-          tabs.forEach((t) => t.classList.remove("is__active"));
-          tab.classList.add("is__active");
-
-          var li_index = Array.from(tab.parentNode.children).indexOf(tab);
-          var panels = document.querySelectorAll(".tabs__panel");
-
-          panels.forEach((panel, index) =>
-            panel.classList.toggle("is__active", index === li_index)
-          );
-        });
-      });
-    </script>
   </body>
 </html>

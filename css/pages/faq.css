@@ -6,16 +6,26 @@
   margin: 0 auto var(--mb-small);
   width: 80%;
 }
+.accordion__item {
+  margin-bottom: var(--mb-small);
+}
 
 .accordion__title,
 .accordion__inner {
-  margin-bottom: var(--mb-small);
   padding: 1rem 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   font-size: 1rem;
   line-height: 150%;
   color: var(--element-bg-color);
+}
+
+.accordion__inner {
+  display: none;
+}
+
+.accordion__inner.active {
+  display: block;
 }
 
 .accordion__inner span {

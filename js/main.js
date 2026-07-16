@@ -112,32 +112,38 @@ const newBtn = document.querySelector(".title__new");
 const hitsBtn = document.querySelector(".title__hits");
 const saleBtn = document.querySelector(".title__sale");
 
-newBtn.addEventListener("click", () => {
-  event.preventDefault();
-  renderProducts(
-    products.filter(
-      product => product.badge.title === "New"
-    )
-  );
-});
+if (newBtn) {
+  newBtn.addEventListener("click", () => {
+    event.preventDefault();
+    renderProducts(
+      products.filter(
+        product => product.badge.title === "New"
+      )
+    );
+  });
+}
 
-saleBtn.addEventListener("click", () => {
-  event.preventDefault();
-  renderProducts(
-    products.filter(
-      product => product.badge.title === "Sale"
-    )
-  );
-});
+if (saleBtn) {
+  saleBtn.addEventListener("click", () => {
+    event.preventDefault();
+    renderProducts(
+      products.filter(
+        product => product.badge.title === "Sale"
+      )
+    );
+  });
+}
 
-hitsBtn.addEventListener("click", () => {
-  event.preventDefault();
-  renderProducts(
-    products.filter(
-      product => !product.badge.title
-    )
-  );
-});
+if (hitsBtn) {
+  hitsBtn.addEventListener("click", () => {
+    event.preventDefault();
+    renderProducts(
+      products.filter(
+        product => !product.badge.title
+      )
+    );
+  });
+}
 
 // Accordion on FAQ page
 
@@ -182,11 +188,7 @@ document.querySelectorAll(".tabs__container").forEach(container => {
 });
 
 // Footer
-const isInnerPage =
-  window.location.pathname.includes("/html/") ||
-  window.location.pathname.includes("\\html\\");
 
-const prefix = isInnerPage ? "../" : "";
 const template = document.createElement("template");
 
 template.innerHTML = `
@@ -196,7 +198,7 @@ template.innerHTML = `
         <nav class="footer__menu">
           <ul class="footer__menu-list">
           <li class="footer__menu-item">
-              <a href="${prefix}шттук.html">Головна</a>
+              <a href="${prefix}inner.html">Головна</a>
             </li>
             <li class="footer__menu-item">
               <a href="${prefix}html/about.html">Про нас</a>

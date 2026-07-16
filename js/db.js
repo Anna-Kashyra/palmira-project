@@ -5,7 +5,7 @@ const products = [
     price: 123.00,
     priceWholesale: 82.00,
     description: "Артикул: W-5117-д.9926",
-		cover: "images/products/product_1.jpg",
+		cover: `${prefix}images/products/product_1.jpg`,
     badge: {
       title: "New",
       bg: "new",
@@ -23,7 +23,7 @@ const products = [
     price: 123.00,
     priceWholesale: 82.00,
     description: "Артикул: W-5129",
-		cover: "images/products/product_2.jpg",
+		cover: `${prefix}images/products/product_2.jpg`,
     badge: {
       title: "",
       bg: "",
@@ -41,7 +41,7 @@ const products = [
     price: 237.80,
     priceWholesale: 198.40,
     description: "Артикул: М-16056",
-		cover: "images/products/product_3.jpg",
+		cover: `${prefix}images/products/product_3.jpg`,
     badge: {
       title: "Sale",
       bg: "sale",
@@ -59,7 +59,7 @@ const products = [
     price: 98.40,
     priceWholesale: 67.50,
     description: "Артикул: W-1883",
-		cover: "images/products/product_4.jpg",
+		cover: `${prefix}images/products/product_4.jpg`,
     badge: {
       title: "New",
       bg: "new",
@@ -77,7 +77,7 @@ const products = [
     price: 114.80,
     priceWholesale: 94.00,
     description: "Артикул: АТ-28193, Д.101",
-		cover: "images/products/product_5.jpg",
+		cover: `${prefix}images/products/product_5.jpg`,
     badge: {
       title: "",
       bg: "",
@@ -96,7 +96,7 @@ const products = [
     price: 102.50,
     priceWholesale: 87.00,
     description: "Артикул: W-2844",
-		cover: "images/products/product_6.jpg",
+		cover: `${prefix}images/products/product_6.jpg`,
     badge: {
       title: "",
       bg: "",
@@ -114,7 +114,7 @@ const products = [
     price: 151.70,
     priceWholesale: 134.20,
     description: "Артикул: W-4741",
-		cover: "images/products/product_7.jpg",
+		cover: `${prefix}images/products/product_7.jpg`,
     badge: {
       title: "New",
       bg: "new",
@@ -133,7 +133,7 @@ const products = [
     price: 82.00,
     priceWholesale: 67.00,
     description: "Артикул: Коттон Троянда №1",
-		cover: "images/products/product_8.jpg",
+		cover: `${prefix}images/products/product_8.jpg`,
     badge: {
       title: "Sale",
       bg: "sale",
@@ -152,7 +152,7 @@ const products = [
     price: 63.00,
     priceWholesale: 54.00,
     description: "Артикул: WM-11226, №2",
-		cover: "images/products/product_9.jpg",
+		cover: `${prefix}images/products/product_9.jpg`,
     badge: {
       title: "Sale",
       bg: "sale",
@@ -171,7 +171,7 @@ const products = [
     price: 109.00,
     priceWholesale: 86.80,
     description: "Артикул: WМ-18220, №2",
-		cover: "images/products/product_10.jpg",
+		cover: `${prefix}images/products/product_10.jpg`,
     badge: {
       title: "",
       bg: "",
@@ -189,7 +189,7 @@ const products = [
     price: 231.00,
     priceWholesale: 196.00,
     description: "Артикул: №269",
-		cover: "images/products/product_11.jpg",
+		cover: `${prefix}images/products/product_11.jpg`,
     badge: {
       title: "Sale",
       bg: "sale",
@@ -208,7 +208,7 @@ const products = [
     price: 256.00,
     priceWholesale: 234.00,
     description: "Артикул: M-833155",
-		cover: "images/products/product_12.jpg",
+		cover: `${prefix}images/products/product_12.jpg`,
     badge: {
       title: "New",
       bg: "new",
@@ -226,7 +226,7 @@ const products = [
     price: 159.00,
     priceWholesale: 132.00,
     description: "Артикул: W-1753, d.2, №5",
-		cover: "images/products/product_13.jpg",
+		cover: `${prefix}images/products/product_13.jpg`,
     badge: {
       title: "",
       bg: "",
@@ -244,7 +244,7 @@ const products = [
     price: 130.00,
     priceWholesale: 119.50,
     description: "Артикул: WМ-13163, №2",
-		cover: "images/products/product_14.jpg",
+		cover: `${prefix}images/products/product_14.jpg`,
     badge: {
       title: "",
       bg: "",
@@ -262,7 +262,7 @@ const products = [
     price: 369.00,
     priceWholesale: 305.00,
     description: "Артикул: WM-14449",
-		cover: "images/products/product_15.jpg",
+		cover: `${prefix}images/products/product_15.jpg`,
     badge: {
       title: "New",
       bg: "new",
@@ -280,7 +280,7 @@ const products = [
     price: 75.60,
     priceWholesale: 68.60,
     description: "Артикул: WM-13202, №1",
-		cover: "images/products/product_16.jpg",
+		cover: `${prefix}images/products/product_16.jpg`,
     badge: {
       title: "Sale",
       bg: "sale",

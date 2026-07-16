@@ -82,7 +82,7 @@ function createProductCard(product) {
           </div>
 
           <div class="common__button">
-            <a href="html/about.html" class="common__btn">У кошик</a>
+            <a href="#!" class="common__btn add-to-cart" data-id="${product.id}">У кошик</a>
           </div>
         </div>
       </div>
@@ -98,6 +98,37 @@ if (productContainer) {
     .map(product => createProductCard(product))
     .join("");
 }
+
+// Add to Cart functionality
+
+document.addEventListener("click", event => {
+  const btn = event.target.closest(".add-to-cart");
+
+  if (!btn) return;
+
+  event.preventDefault();
+
+  const productId = Number(btn.dataset.id);
+
+  addToCart(productId);
+});
+
+// Cart counter in header
+function updateCartCounter() {
+  const counter = document.querySelector("#cart-amount");
+
+  if (!counter) return;
+
+  const cart = getCart();
+
+  const totalQuantity = cart.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
+
+  counter.textContent = totalQuantity;
+}
+updateCartCounter();
 
 // Categories filter on Home page
 

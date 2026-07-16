@@ -22,6 +22,15 @@
   width: 100%;
   display: table-row;
 }
+.empty-cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: var(--element-bg-color);
+}
 
 .table__body {
   display: table-row-group;

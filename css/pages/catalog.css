@@ -1,32 +1,76 @@
-.choice {
+.filter__container {
   margin-bottom: var(--mb-small);
   display: flex;
   justify-content: space-between;
 }
 
-.filtres__button {
-  padding: 1rem 2rem;
-  background-color: var(--element-bg-color);
+.choice {
+  position: relative;
+  flex-basis: 60%;
+}
+
+.filters {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+  width: 36rem;
+  background-color: var(--primary-bg-color);
   border-radius: 0.5rem;
-  font-size: 0.875rem;
-  color: var(--element-text-color);
-  text-transform: uppercase;
-  transition: background-color 0.1s linear, color 0.1s linear;
+  box-shadow: 0 10px 30px #363636;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.5s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.filters.open {
+  transform: scaleY(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.filters__item {
+  padding: 0.3rem 6rem 0.3rem 0;
+}
+
+.filters__item p {
+  color: var(--element-bg-color);
+  font-weight: 600;
+}
+
+.filters__item .common__button,
+.choice .common__button {
+  text-align: left;
   cursor: pointer;
 }
 
-.filtres__button:hover {
-  background-color: var(--active-color);
-  color: var(--element-text-color);
+.filters__inner {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 
+.filters__inner-item {
+  margin-bottom: 0.5rem;
+}
+
+.filters__inner-item span {
+  padding-left: 0.5rem;
+}
+
+/* Sort */
 .sort {
   display: flex;
-  align-items: baseline;
+  align-items: stretch;
   gap: 2rem;
 }
 .sort p {
   margin-bottom: 0.5rem;
+  align-self: center;
 }
 
 .sort__select {
@@ -37,4 +81,64 @@
 .sort__select:focus {
   outline: 0;
   border: 2px solid var(--element-bg-color);
+}
+
+/*********** Media *************/
+/* Large */
+/* @media (max-width: 90rem){
+} */
+
+/* Desktop */
+@media (max-width: 75rem) {
+  .filters__item {
+    padding: 0.3rem 4rem 0.3rem 0;
+  }
+}
+
+/* Laptop */
+@media (max-width: 62rem) {
+}
+
+/* Tablet */
+@media (max-width: 48rem) {
+  .filters {
+    width: 30rem;
+  }
+
+  .catalog__main .section__title {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 36rem) {
+  .choice .common__btn {
+    padding: 1rem 1rem;
+  }
+
+  .filters {
+    width: 19rem;
+  }
+
+  .filters__item {
+    padding: 0.3rem 1rem 0.3rem 0;
+  }
+
+  .filters__inner-item {
+    width: 6rem;
+  }
+
+  .sort p {
+    display: none;
+  }
+}
+
+@media (max-width: 20rem) {
+  .filters {
+    width: 15rem;
+  }
+
+  .choice .common__btn {
+    padding: 0.5rem 0.5rem;
+  }
 }

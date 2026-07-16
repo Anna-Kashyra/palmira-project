@@ -356,13 +356,236 @@
 
               <h2 class="section__title">Всі товари</h2>
 
-              <div class="choice">
-                <div class="filters">
-                  <button class="filtres__button" type="button">
-                    Показати фільтри
-                  </button>
+              <div class="filter__container">
+                <div class="choice">
+                  <div class="common__button">
+                    <button
+                      class="common__btn"
+                      type="menu"
+                      name="choice__button"
+                    >
+                      Показати фільтри
+                    </button>
+                  </div>
 
-                  <div class="filtres__inner"></div>
+                  <form id="filter">
+                    <div class="filters">
+                      <!-- Color -->
+                      <div class="filters__item">
+                        <p>Колір</p>
+
+                        <ul class="filters__inner">
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="color"
+                              value="white"
+                            /><span>Білий</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="color"
+                              value="black"
+                            /><span>Чорний</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="color"
+                              value="yellow"
+                            /><span>Жовтий</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="color"
+                              value="blue"
+                            /><span>Синій</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="color"
+                              value="green"
+                            /><span>Зелений</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="color"
+                              value="red"
+                            /><span>Червоний</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="color"
+                              value="orange"
+                            /><span>Оранжевий</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="color"
+                              value="pink"
+                            /><span>Рожевий</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="color"
+                              value="purple"
+                            /><span>Фіолетовий</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="color"
+                              value="brown"
+                            /><span>Коричневий</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="color"
+                              value="grey"
+                            /><span>Сірий</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- Textile__type -->
+                      <div class="filters__item">
+                        <p>Призначення</p>
+
+                        <ul class="filters__inner">
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="summer"
+                            /><span>Весняно-літні ткани</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="winter"
+                            /><span>Осінньо-зимові тканини</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="blouse"
+                            /><span>Для блузок/сорочок</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="dress"
+                            /><span>Для суконь</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="suit"
+                            /><span>Для костюмів</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="skirt"
+                            /><span>Для спідниць</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="pants"
+                            /><span>Для брюк</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="jacket"
+                            /><span>Для курток/плащів</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="coat"
+                            /><span>Для пальто</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="holiday"
+                            /><span>Для святкового одягу</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="child"
+                            /><span>Для дитячого одягу</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="decor"
+                            /><span>Для оздоблення</span>
+                          </li>
+
+                          <li class="filters__inner-item">
+                            <input
+                              type="checkbox"
+                              name="textil-type"
+                              value="lining"
+                            /><span>Підкладка</span>
+                          </li>
+                        </ul>
+                        <div class="common__button">
+                          <button
+                            class="common__btn"
+                            type="submit"
+                            name="filter__button"
+                          >
+                            Примінити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
 
                 <div class="sort">

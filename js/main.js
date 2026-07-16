@@ -102,6 +102,8 @@ if (productContainer) {
 // Categories filter on Home page
 
 function renderProducts(productsToRender) {
+  if (!productContainer) return;
+
   productContainer.innerHTML = productsToRender
     .map(product => createProductCard(product))
     .join("");
@@ -144,6 +146,81 @@ if (hitsBtn) {
     );
   });
 }
+
+// Catalog filtres
+const button = document.querySelector('.common__btn[name="choice__button"]');
+const filtersBlock = document.querySelector(".filters");
+
+button?.addEventListener("click", event => {
+  event.preventDefault();
+
+  filtersBlock?.classList.toggle("open");
+});
+
+const filterForm = document.querySelector("#filter");
+const sortSelect = document.querySelector(".sort__select");
+
+function applyFiltersAndSort() {
+  let result = [...products];
+
+  // Colors
+  const selectedColors = [
+    ...document.querySelectorAll(
+      'input[name="color"]:checked'
+    )
+  ].map(item => item.value);
+
+  // Purposes and Seasons
+  const selectedTypes = [
+    ...document.querySelectorAll(
+      'input[name="textil-type"]:checked'
+    )
+  ].map(item => item.value);
+
+  // Filter products based on selected colors, purposes, and seasons
+  result = result.filter(product => {
+
+    const colorMatch =
+      selectedColors.length === 0 ||
+      selectedColors.some(color =>
+        product.colors.includes(color)
+      );
+
+    const typeMatch =
+      selectedTypes.length === 0 ||
+      selectedTypes.some(type =>
+        product.seasons.includes(type) ||
+        product.purposes.includes(type)
+      );
+
+    return colorMatch && typeMatch;
+  });
+
+  // Sort
+  switch (sortSelect.value) {
+    case "low-high":
+      result.sort((a, b) => a.price - b.price);
+      break;
+
+    case "high-low":
+      result.sort((a, b) => b.price - a.price);
+      break;
+
+    default:
+      result.sort((a, b) => a.id - b.id);
+  }
+
+  renderProducts(result);
+}
+
+filterForm?.addEventListener("submit", event => {
+  event.preventDefault();
+
+  applyFiltersAndSort();
+  filtersBlock?.classList.remove("open");
+});
+
+sortSelect?.addEventListener("change", applyFiltersAndSort);
 
 // Accordion on FAQ page
 

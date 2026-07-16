@@ -101,7 +101,7 @@
   color: var(--active-color);
 }
 
-.product__price-retail:after,
+/* .product__price-retail:after,
 .product__price-wholesale:after {
   content: var(--currency-symbol);
   padding-left: 0.5rem;
@@ -109,7 +109,7 @@
 
 .product__price-retail:after {
   color: var(--active-color);
-}
+} */
 
 .product:hover .product__icons {
   display: flex;

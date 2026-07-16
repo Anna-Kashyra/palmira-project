@@ -34,6 +34,54 @@ if (slides.length) {
   }, 5000);
 }
 
+// Categories filter on Home page
+
+const newBtn = document.querySelector(".title__new");
+const hitsBtn = document.querySelector(".title__hits");
+const saleBtn = document.querySelector(".title__sale");
+
+const products = document.querySelectorAll(".product");
+
+if (newBtn && hitsBtn && saleBtn && products.length) {
+  function showProducts(filter) {
+    products.forEach(product => {
+      const hasNewBadge = product.querySelector(".badge__new");
+      const hasSaleBadge = product.querySelector(".badge__sale");
+
+      let shouldShow = false;
+
+      if (filter === "new") {
+        shouldShow = hasNewBadge;
+      }
+
+      if (filter === "sale") {
+        shouldShow = hasSaleBadge;
+      }
+
+      if (filter === "hits") {
+        shouldShow = !hasNewBadge && !hasSaleBadge;
+      }
+
+      product.style.display = shouldShow ? "block" : "none";
+    });
+  }
+
+  newBtn.addEventListener("click", event => {
+    event.preventDefault();
+    showProducts("new");
+  });
+
+  saleBtn.addEventListener("click", event => {
+    event.preventDefault();
+    showProducts("sale");
+  });
+
+  hitsBtn.addEventListener("click", event => {
+    event.preventDefault();
+    showProducts("hits");
+  });
+}
+
 // Accordion on FAQ page
 
 const accordionItems = document.querySelectorAll(".accordion__item");

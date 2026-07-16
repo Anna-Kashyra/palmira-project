@@ -36,7 +36,7 @@ if (slides.length) {
   }, 5000);
 }
 
-// Products on Home page
+// Products List on Home page
 
 function createProductCard(product) {
   const badge =

@@ -179,6 +179,7 @@ if (hitsBtn) {
 }
 
 // Catalog filtres
+
 const button = document.querySelector('.common__btn[name="choice__button"]');
 const filtersBlock = document.querySelector(".filters");
 
@@ -252,6 +253,104 @@ filterForm?.addEventListener("submit", event => {
 });
 
 sortSelect?.addEventListener("change", applyFiltersAndSort);
+
+// Catalog aside
+
+const categoriesContainer = document.querySelector(".aside__categories");
+
+const textiles = [
+  ...new Set(products.map(product => product.textile))
+].sort();
+
+categoriesContainer.innerHTML = `
+  <li class="aside__categories-common">
+    <a href="#" data-filter="sale">Акції</a>
+  </li>
+  <li class="aside__categories-common">
+    <a href="#" data-filter="new">Новинки</a>
+  </li>
+  <li class="aside__categories-common">
+    <a href="#" data-filter="popular">Хіти продаж</a>
+  </li>
+
+  ${textiles.map(textile => `
+    <li>
+      <a href="#" data-textile="${textile}">
+        ${textile.charAt(0).toUpperCase() + textile.slice(1)}
+      </a>
+    </li>
+  `).join("")}
+`;
+
+function filterProducts(link) {
+  const textile = link.dataset.textile;
+  const filter = link.dataset.filter;
+
+  if (textile === "all") {
+    renderProducts(products);
+    return;
+  }
+
+  if (textile) {
+    const filteredProducts = products.filter(
+      product => product.textile === textile
+    );
+
+    renderProducts(filteredProducts);
+    return;
+  }
+
+  if (filter === "sale") {
+    const filteredProducts = products.filter(
+      product => product.badge?.bg === "sale"
+    );
+
+    renderProducts(filteredProducts);
+    return;
+  }
+
+  if (filter === "new") {
+    const filteredProducts = products.filter(
+      product => product.badge?.bg === "new"
+    );
+
+    renderProducts(filteredProducts);
+    return;
+  }
+
+  if (filter === "popular") {
+    const filteredProducts = products.filter(
+      product => product.popular === "popular"
+    );
+
+    renderProducts(filteredProducts);
+  }
+}
+
+if (categoriesContainer) {
+  categoriesContainer.addEventListener("click", e => {
+    const link = e.target.closest("a");
+
+    if (!link) return;
+
+    e.preventDefault();
+
+    filterProducts(link);
+  });
+}
+
+const allProductsLink = document.querySelector(
+  '.section__title a[data-textile="all"]'
+);
+
+if (allProductsLink) {
+  allProductsLink.addEventListener("click", e => {
+    e.preventDefault();
+
+    renderProducts(products);
+  });
+}
+
 
 // Accordion on FAQ page
 

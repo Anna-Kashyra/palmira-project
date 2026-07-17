@@ -9,7 +9,8 @@
   color: var(--active-color);
 }
 
-.section__title {
+.section__title,
+.section__title a {
   margin: 0 auto var(--mb-small);
   text-transform: uppercase;
   text-align: center;

@@ -2,11 +2,21 @@
 
 Palmira Textile is a responsive front-end e-commerce application for a fabric wholesale store. The project provides product catalog browsing, filtering, sorting, shopping cart functionality, and a fully responsive user interface built with HTML, CSS, and JavaScript.
 
+## Project Background
+
+This project was created as a frontend development practice project.
+
+The website structure and catalog organization were inspired by the original Palmira Textile website:
+
+[Palmira Textile](https://www.palmira-textile.com/uk/golovna-2/)
+
+The project was developed independently using HTML, CSS, and JavaScript for educational purposes and is not affiliated with the original company.
+
 ## Live Demo
 
 The project is deployed on GitHub Pages and can be viewed online:
 
-🔗 Palmira Textile Live Demo
+[View Palmira Textile Demo](https://anna-kashyra.github.io/palmira-project/index.html)
 
 ## Features
 

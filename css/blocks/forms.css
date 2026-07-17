@@ -52,10 +52,10 @@
 
 .form__button {
   text-align: right;
+  margin-bottom: 1rem;
 }
 
 .form__button input {
-  padding: 1rem 2rem;
   background-color: var(--element-bg-color);
   border: 0;
   border-radius: 0.5rem;
@@ -118,4 +118,34 @@
 
 .order textarea {
   height: 5.5rem;
+}
+
+/* Tablet */
+@media (max-width: 48rem) {
+  .form__container-left,
+  .form__container-right {
+    flex-basis: 100%;
+    padding: 0 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 36rem) {
+  .form__container {
+    width: 100%;
+  }
+
+  .form__container-left,
+  .form__container-right {
+    padding: 0;
+  }
+
+  .delivery__country,
+  .delivery__delivery {
+  flex-basis: 100%;  
+  }
+
+  .delivery__country{
+    margin-bottom: 1rem;
+  }
 }

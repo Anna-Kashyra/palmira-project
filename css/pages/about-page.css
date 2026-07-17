@@ -4,8 +4,11 @@
 }
 
 .about-page__container {
+  max-width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .about-page__text,
@@ -40,4 +43,31 @@
 
 .order__list a {
   color: var(--active-color);
+}
+
+/* Laptop */
+@media (max-width: 62rem) {
+  .about-page__text,
+  .about-page__img {
+    width: 100%;
+  }
+  .about-page__text {
+    margin-bottom: var(--mb-large);
+  }
+
+  .about-page__img {
+    text-align: center;
+  }
+  .about-page__list {
+    padding: 0 10rem;
+  }
+}
+/* Tablet */
+@media (max-width: 48rem) {
+  .about-page__container {
+    max-width: 100%;
+  }
+  .about-page__list {
+    padding: 0 1rem;
+  }
 }

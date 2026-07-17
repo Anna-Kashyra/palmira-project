@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 82.5rem;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 1rem;
 }
 
 .active {
@@ -47,20 +47,21 @@
 /* Common__button */
 .common__button {
   text-align: center;
+  cursor: pointer;
 }
 
-.common__btn {
+.common__btn, .form__button {
   display: inline-block;
   padding: 1rem 2rem;
   background-color: var(--element-bg-color);
   border-radius: 0.5rem;
-  font-size: 0.875rem;
+  font-size: clamp(0.625rem, 0.5536rem + 0.3571vw, 0.875rem);
   color: var(--element-text-color);
   text-transform: uppercase;
   transition: background-color 0.1s linear, color 0.1s linear;
 }
 
-.common__btn:hover {
+.common__btn:hover, .form__button:hover {
   background-color: var(--active-color);
   color: var(--element-text-color);
 }

@@ -29,3 +29,18 @@
 .profile__address-value a {
   color: var(--active-color);
 }
+
+@media (max-width: 48rem) {
+  .profile__name-name,
+  .profile__tel-tel,
+  .profile__email-email,
+  .profile__address-address {
+    width: 35%;
+  }
+}
+@media (max-width: 36rem) {
+  .profile__data,
+  .profile__address {
+    padding: 1rem;
+  }
+}

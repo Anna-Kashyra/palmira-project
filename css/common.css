@@ -15,10 +15,10 @@
 
   --primary-font-family: "Inter Tight", sans-serif;
 
-  --primary-font-size: 1rem;
+  --primary-font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);;
 
-  --mb-small: 2rem;
-  --mb-large: 3rem;
+  --mb-small: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+  --mb-large: clamp(2rem, 1.7143rem + 1.4286vw, 3rem);
 
   --large-screen: 1440px;
   --desktop: 1200px;
@@ -45,7 +45,7 @@ body {
 }
 
 header {
-  font-size: 0.875rem;
+  font-size: clamp(0.625rem, 0.5536rem + 0.3571vw, 0.875rem);
 }
 
 main {
@@ -53,7 +53,7 @@ main {
 }
 
 footer {
-  font-size: 0.875rem;
+  font-size: clamp(0.625rem, 0.5536rem + 0.3571vw, 0.875rem);
   color: var(--element-text-color);
   background-color: var(--element-bg-color);
 }
@@ -65,15 +65,15 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(1.3rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
 }
 
 h2 {
-  font-size: clamp(1.2rem, 1.5vw, 1.3rem);
+  font-size: clamp(0.875rem, 0.7679rem + 0.5357vw, 1.25rem);
 }
 
 h3 {
-  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  font-size: clamp(0.75rem, 0.6429rem + 0.5357vw, 1.125rem);
 }
 
 ul,
@@ -86,6 +86,7 @@ a {
 }
 
 button {
+  outline: none;
   border: 0;
   background-color: transparent;
 }

@@ -15,9 +15,11 @@
   padding: 1rem 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
-  font-size: 1rem;
   line-height: 150%;
   color: var(--element-bg-color);
+}
+.accordion__title {
+  font-size: clamp(0.875rem, 0.7679rem + 0.5357vw, 1.25rem);
 }
 
 .accordion__inner {
@@ -49,4 +51,11 @@
   right: 2rem;
   z-index: 10;
   transform: translateY(-50%);
+}
+
+/* Tablet */
+@media (max-width: 48rem) {
+  .accordion {
+    width: 85%;
+  }
 }

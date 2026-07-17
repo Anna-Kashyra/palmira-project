@@ -1,6 +1,5 @@
 .delivery__item {
   margin-bottom: var(--mb-large);
-  font-size: 1rem;
   line-height: 150%;
 }
 
@@ -19,7 +18,7 @@
 .delivery__list-order {
   width: 80%;
   margin: 0 auto 0.7rem;
-  font-size: 0.875rem;
+  font-size: clamp(0.5rem, 0.3929rem + 0.5357vw, 0.875rem);
 }
 
 .delivery__list-order li {
@@ -27,11 +26,13 @@
 }
 
 .delivery__company {
-  padding: 0 7rem 4rem;
+  max-width: 80%;
+  margin: 0 auto var(--mb-large);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .delivery__company-logo {
@@ -46,4 +47,41 @@
 
 .return .common__button {
   margin-bottom: var(--mb-large);
+}
+
+/* Laptop */
+@media (max-width: 62rem) {
+  .delivery__company-logo {
+    flex-basis: 43%;
+  }
+
+  .delivery__list li {
+    margin: 0 1rem;
+  }
+
+  .return .delivery__list li {
+    margin-bottom: 1rem;
+  }
+
+  .delivery__list-inner li {
+    margin: 0 2rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 48rem) {
+  .delivery__text {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 36rem) {
+  .delivery__company-logo {
+    flex-basis: 40%;
+  }
+
+  .delivery__list {
+    width: 100%;
+  }
 }

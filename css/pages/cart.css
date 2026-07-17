@@ -91,3 +91,21 @@
 .order {
   margin-bottom: var(--mb-large);
 }
+
+@media (max-width: 48rem) {
+  .table,  
+  .table__body,
+  .row, .cell{
+    display: block;
+  }
+
+  .table__header{
+    display: none;
+  }
+
+  .cell__flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

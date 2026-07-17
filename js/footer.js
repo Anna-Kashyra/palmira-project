@@ -1,5 +1,4 @@
 // Footer
-
 const template = document.createElement("template");
 
 template.innerHTML = `
@@ -8,8 +7,8 @@ template.innerHTML = `
       <section class="footer__top">
         <nav class="footer__menu">
           <ul class="footer__menu-list">
-          <li class="footer__menu-item">
-              <a href="${prefix}inner.html">Головна</a>
+            <li class="footer__menu-item">
+              <a href="${prefix}index.html">Головна</a>
             </li>
             <li class="footer__menu-item">
               <a href="${prefix}html/about.html">Про нас</a>
@@ -35,19 +34,19 @@ template.innerHTML = `
               <a href="${prefix}html/catalog.html">Всі товари</a>
             </li>
             <li class="footer__catalog-item">
-              <a href="${prefix}html/catalog.html">Тканини за призначенням</a>
+              <a href="${prefix}html/catalog.html?filter=textile">Тканини за призначенням</a>
             </li>
             <li class="footer__catalog-item">
-              <a href="${prefix}html/catalog.html">Новинки</a>
+              <a href="${prefix}html/catalog.html?filter=new">Новинки</a>
             </li>
             <li class="footer__catalog-item">
-              <a href="${prefix}html/catalog.html">Хіти продаж</a>
+              <a href="${prefix}html/catalog.html?filter=popular">Хіти продаж</a>
             </li>
             <li class="footer__catalog-item">
-              <a href="${prefix}html/catalog.html">Акції</a>
+              <a href="${prefix}html/catalog.html?filter=sale">Акції</a>
             </li>
             <li class="footer__catalog-item">
-              <a href="${prefix}html/catalog.html">Оптовим покупцям</a>
+              <a href="${prefix}html/contacts.html">Оптовим покупцям</a>
             </li>
           </ul>
         </nav>
@@ -83,7 +82,7 @@ template.innerHTML = `
         <div class="footer__address">
           <div class="address__list">
             <p class="address__list-title">
-              <a href="${prefix}html/contacts.html">Наша адреса:</a>
+              Наша адреса:
             </p>
             <div class="address__list-item">
               м. Одеса, <br />
@@ -135,3 +134,16 @@ template.innerHTML = `
 
 let clone = template.content.cloneNode(true);
 document.body.appendChild(clone);
+
+// Highlight active link in footer
+document.querySelectorAll(".footer a").forEach(link => {
+  const href = link.getAttribute("href");
+
+  if (!href) return;
+
+  const currentPath = window.location.pathname;
+
+  if (href.endsWith(currentPath.split("/").pop())) {
+    link.classList.add("active");
+  }
+});

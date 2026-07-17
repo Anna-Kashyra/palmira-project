@@ -24,13 +24,16 @@ function renderCart() {
       const sum = item.price * item.quantity;
 
       total += sum;
+      const imagePath = item.cover.startsWith("../")
+      ? item.cover
+      : `../${item.cover}`;
 
       return `
         <div class="row">
           <div class="cell cell__flex">
             <div class="cell__img">
               <img
-                src="${item.cover}"
+                src="${imagePath}"
                 alt="${item.name}"
               />
             </div>

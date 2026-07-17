@@ -2,6 +2,10 @@
   color: var(--element-text-color);
 }
 
+.footer a.active {
+  color: var(--active-color);
+}
+
 .footer__top {
   padding: 2rem 0;
   display: grid;
@@ -61,4 +65,38 @@
 .footer__bottom-privacy:after {
   content: "|";
   padding: 0 2rem;
+}
+
+/*********** Media *************/
+/* Laptop */
+@media (max-width: 62rem){
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 36rem) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .footer__bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .footer__menu, .footer__catalog, .footer__contacts {
+    border-bottom: 1px solid var(--element-text-color);
+  }
+  .footer__bottom-privacy:before,
+  .footer__bottom-privacy:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--element-text-color);
+    margin: 1rem 0;
+  }
 }

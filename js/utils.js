@@ -7,6 +7,22 @@ function getTextiles(products) {
   ].sort();
 }
 
+function getSeasons(products) {
+  return [
+    ...new Set(
+      products.flatMap(product => product.seasons)
+    )
+  ];
+}
+
+function getPurposes(products) {
+  return [
+    ...new Set(
+      products.flatMap(product => product.purposes)
+    )
+  ];
+}
+
 // Products List
 
 function createProductCard(product) {

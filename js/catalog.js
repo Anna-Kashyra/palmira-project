@@ -23,9 +23,24 @@ const filters = {
 const params = new URLSearchParams(window.location.search);
 
 const textileFromUrl = params.get("textile");
+const seasonFromUrl = params.get("season");
+const purposeFromUrl = params.get("purpose");
+const filterFromUrl = params.get("filter");
 
 if (textileFromUrl) {
   filters.textile = textileFromUrl;
+}
+
+if (seasonFromUrl) {
+  filters.types = [seasonFromUrl];
+}
+
+if (purposeFromUrl) {
+  filters.types = [purposeFromUrl];
+}
+
+if (filterFromUrl) {
+  filters.special = filterFromUrl;
 }
 
 
@@ -186,7 +201,19 @@ if (allProductsLink) {
   allProductsLink.addEventListener("click", e => {
     e.preventDefault();
 
-    renderProducts(products);
+    filters.textile = "all";
+    filters.special = null;
+    filters.colors = [];
+    filters.types = [];
+    filters.sort = "default";
+
+    filterForm?.reset();
+
+    if (sortSelect) {
+      sortSelect.value = "default";
+    }
+
+    applyFiltersAndSort();
   });
 }
 

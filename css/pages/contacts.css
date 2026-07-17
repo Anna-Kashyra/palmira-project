@@ -102,7 +102,6 @@
 }
 
 .maps__shop-text {
-  font-size: 1rem;
   line-height: 150%;
   margin-bottom: 1rem;
 }
@@ -160,4 +159,58 @@
 /* Mail */
 .mail {
   margin-bottom: var(--mb-large);
+}
+.error {
+  border: 1px solid red;
+}
+
+@media (max-width: 75rem) {
+  .maps__shop-item {
+    width: 48%;
+    margin-bottom: 2rem;
+  }
+  .maps__shop-item iframe {
+    width: 100%;
+  }
+}
+
+/* Laptop */
+@media (max-width: 62rem) {
+  .tabs li a {
+    font-size: 0.75rem;
+    padding: 1rem 1rem;
+  }
+
+  .sotial__item {
+    flex-basis: 48%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 48rem) {
+  .tabs__container {
+    max-width: 90%;
+  }
+  .tabs li a {
+    font-size: 0.625rem;
+  }
+
+  .maps__shop-item {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 36rem) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tabs li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .tabs li a {
+    border-radius: 0.5rem;
+  }
 }

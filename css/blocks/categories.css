@@ -29,3 +29,10 @@ hr {
   background-color: var(--element-bg-color);
   margin-bottom: var(--mb-small);
 }
+
+/* Tablet */
+@media (max-width: 48rem) {
+  .categories__title {
+    width: 80%;
+  }
+}
